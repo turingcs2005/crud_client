@@ -1,0 +1,9 @@
+<div class="mat-h2">Claire's diary entry &nbsp;&nbsp; 
+    <button mat-raised-button color="accent" (click)="editEntry()"><mat-icon>create</mat-icon></button>&nbsp;&nbsp;
+    <button mat-raised-button color="accent" (click)="deleteEntry()"><mat-icon>delete</mat-icon></button>
+</div>
+
+<div *ngIf="diary">
+    <div>{{ diary.diaryDate | date }}</div>
+    <div>{{ diary.diaryContent }}</div>
+</div>

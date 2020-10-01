@@ -1,0 +1,17 @@
+<div class="mat-h2">Add a diary entry</div>
+
+<form [formGroup]="diaryForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+        <mat-label>Diary date</mat-label>
+        <input matInput [matDatepicker]="picker1" formControlName="diaryDate">
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field><br>
+
+    <mat-form-field>
+        <mat-label>Diary content</mat-label>
+        <textarea matInput formControlName="diaryContent" rows="5"></textarea>
+    </mat-form-field><br>
+
+    <button mat-raised-button color="accent" type=submit><mat-icon>save</mat-icon></button>
+</form>

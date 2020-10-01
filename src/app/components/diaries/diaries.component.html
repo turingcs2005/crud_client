@@ -1,0 +1,4 @@
+<div class="mat-h2">A list of diaries</div>
+<div *ngIf="diaries">
+    <button mat-raised-button color="accent" *ngFor="let x of diaries" [routerLink]="['/diary-details/', x._id]">{{ x.diaryDate | date }}</button>
+</div>
