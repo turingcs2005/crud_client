@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class AddEntryComponent implements OnInit {
 
   diaryForm: FormGroup = null;
+  today = new Date();
 
   constructor(
     private api: ApiService,
@@ -24,7 +25,7 @@ export class AddEntryComponent implements OnInit {
       diaryContent: [null, Validators.required]
     });
 
-    this.diaryForm.get('diaryDate').setValue(Date());
+    this.diaryForm.get('diaryDate').setValue(this.today);
   }
 
   onSubmit(): void {
